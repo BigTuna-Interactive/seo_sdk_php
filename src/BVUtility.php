@@ -1,5 +1,7 @@
 <?php
 
+namespace BazaarvoiceSeo;
+
 /**
  * BV PHP SEO SDK Utilities.
  */
@@ -57,9 +59,9 @@ class BVUtility {
       foreach ($typeArray as $key => $value) {
         $supportList[] = $key . '=' . $value;
       }
-      throw new Exception('Obtained not supported ' . $typeName
-      . '. BV Class supports following ' . $typeName . ': '
-      . implode(', ', $supportList));
+      throw new \Exception('Obtained not supported ' . $typeName
+        . '. BV Class supports following ' . $typeName . ': '
+        . implode(', ', $supportList));
     }
 
     return true;
@@ -141,7 +143,7 @@ class BVUtility {
         // to win over fragment if there are the same parameters in both, then
         // only add if not already there.
         if (!isset($params[$values[0]])) {
-          $params[$values[0]] = $values[1];
+          $params[$values[0]] = urldecode($values[1]);
         }
       }
     }

@@ -1,0 +1,23 @@
+{
+  "name": "bigtuna-interactive/seo_sdk_php",
+  "type": "library",
+  "description": "Bazaarvoice SEO SDK for PHP",
+  "keywords": [
+    "bazaarvoice",
+    "seo",
+    "php",
+    "review",
+    "rating",
+    "sdk"
+  ],
+  "homepage": "https://github.com/BigTuna-Interactive/seo_sdk_php",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "BazaarvoiceSeo\\": "src/"
+    }
+  },
+}
